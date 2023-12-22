@@ -1,0 +1,15 @@
+<!-- rabbits/templates/rabbits/rabbit_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Rabbit Detail{% endblock %}
+
+{% block content %}
+    <div class="rabbit-detail">
+        <h2>{{ rabbit.name }}</h2>
+        <img src="{{ rabbit.image.url }}" alt="{{ rabbit.name }}" class="rabbit-image-detail">
+        <p>Age: {{ rabbit.age }}</p>
+        {% if rabbit.description %}
+            <p>{{ rabbit.description }}</p>
+        {% endif %}
+    </div>
+{% endblock %}

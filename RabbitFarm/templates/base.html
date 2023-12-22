@@ -1,0 +1,35 @@
+{% load static %}
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>{% block title %}RabbitFarm{% endblock %}</title>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Logo">
+        </div>
+        <div class="menu">
+            <a href="{% url 'rabbit_list' %}" {% if request.path == '/' %}class="active"{% endif %}>Rabbits</a>
+            <a href="#" {% if request.path == '/feeding/' %}class="active"{% endif %}>Feeding</a>
+            <a href="#" {% if request.path == '/health/' %}class="active"{% endif %}>Health</a>
+            <a href="#" {% if request.path == '/core/' %}class="active"{% endif %}>Core</a>
+        </div>
+    </div>
+    
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+</body>
+</html>
+

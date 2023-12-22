@@ -1,0 +1,23 @@
+<!-- rabbits/templates/rabbits/rabbit_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Rabbit List{% endblock %}
+
+{% block content %}
+    <div class="rabbit-list">
+        {% for rabbit in rabbits %}
+            <a href="{% url 'rabbit_detail' pk=rabbit.pk %}" class="rabbit-item-link">
+                <div class="rabbit-item">
+                    <img src="{{ rabbit.image.url }}" alt="{{ rabbit.name }}" class="rabbit-image">
+                    <div class="rabbit-details">
+                        <h3>{{ rabbit.name }}</h3>
+                        <p>Age: {{ rabbit.age }}</p>
+                        {% if rabbit.description %}
+                            <p>{{ rabbit.description }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
