@@ -1,0 +1,63 @@
+
+RabbitFarm/
+|-- manage.py
+|-- RabbitFarm/
+|   |-- __init__.py
+|   |-- settings/
+|   |   |-- __init__.py
+|   |   |-- base.py
+|   |   |-- local.py
+|   |   |-- production.py
+|   |-- urls.py
+|   |-- asgi.py
+|   |-- wsgi.py
+|
+|-- core/
+|   |-- __init__.py
+|   |-- settings.py
+|   |-- urls.py
+|   |-- asgi.py
+|   |-- wsgi.py
+|
+|-- rabbits/
+|   |-- __init__.py
+|   |-- admin.py
+|   |-- apps.py
+|   |-- migrations/
+|   |   |-- __init__.py
+|   |-- models.py
+|   |-- tests.py
+|   |-- views.py
+|
+|-- health/
+|   |-- __init__.py
+|   |-- admin.py
+|   |-- apps.py
+|   |-- migrations/
+|   |   |-- __init__.py
+|   |-- models.py
+|   |-- tests.py
+|   |-- views.py
+|
+|-- feeding/
+|   |-- __init__.py
+|   |-- admin.py
+|   |-- apps.py
+|   |-- migrations/
+|   |   |-- __init__.py
+|   |-- models.py
+|   |-- tests.py
+|   |-- views.py
+|
+|-- templates/
+|   |-- base.html
+|
+|-- static/
+|   |-- css/
+|   |   |-- style.css
+|   |-- js/
+|   |   |-- script.js
+|
+|-- media/
+|
+|-- requirements.txt
